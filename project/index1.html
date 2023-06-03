@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOTING ZONE</title>
+    <style>
+        h1{
+            text-align: center;
+            color: aliceblue;
+            font-size: 50px;
+        }
+        h1:hover{
+            /* background-color: rgb(41, 46, 46); */
+            /* box-shadow: 0px 0px 20px 5px rgb(57, 57, 58); */
+            transform: rotate(0) scale(1.4) translateZ(0);
+        }
+        a{
+            /* padding-left: 70px; */
+            /* text-decoration: none; */
+            /* color:rgb(128, 131, 133); */
+            float:right;
+        }
+        /* a:hover{ */
+            /* color: rgb(231, 235, 238); */
+            /* backdrop-filter: blur(10px); */
+            /* box-shadow: 0px 0px 20px 5px; */
+        /* } */
+        p{
+            color:rgb(94, 94, 100);
+            font-size:x-large;
+            margin-top: 80px;
+        }
+        p:hover{
+            color: rgb(207, 188, 168);
+            background-color:transparent;
+            /* border: 2px solid wheat; */
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            /* box-shadow: 0px 0px 20px 5px rgb(37, 37, 63); */
+            cursor: pointer;
+            transform: rotate(0) scale(1.1) translateZ(0);
+        }
+        .container{
+            height: 450px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .box2{
+            height:170px;
+            padding: 70px;
+            padding-left: 80px;
+            /* align-items: center; */
+            /* padding:50px; */
+            display:flex;
+            /* flex-direction: row; */
+            /* justify-items:center; */
+        }
+        /* img{
+            height:300px;
+            float: center 10px;
+        } */
+        .box1{
+             height: 400px;
+             /* padding-right: 200px; */
+        }
+        body{
+            /* display: flex; */
+            /* justify-content:center; */
+            /* align-items: center; */
+            /* min-height: 100vh; */
+            /* width: 100%; */
+            /* margin: 70px; */
+            margin-left: 70px;
+            margin-right: 70px;
+            /* background: url("Bigg-Boss3.jpg")no-repeat; */
+            /* background-position: center;
+            background-size: cover; */
+            /* background: rgb(4, 0, 8); */
+            /* background-color: #FF3CAC; */
+            /* background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%); */
+            background: linear-gradient(90deg, #010405,rgb(51, 21, 105), #69167e);
+        }
+        a {
+            padding: .5em .9em;
+            color: rgba(236, 234, 234, 0.5);
+            position: relative;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        a::before,
+        a::after {
+            content: '';
+            height: 14px;
+            width: 14px;
+            position: absolute;
+            transition: all .35s ease;
+            opacity: 0;
+        }
+
+        a::before {
+          content: '';
+          right: 0;
+          top: 0;
+          border-top: 3px solid #d38df1;
+          border-right: 3px solid #f5f1f8;
+          transform: translate(-100%, 50%);
+        }
+
+        a:after {
+          content: '';
+          left: 0;
+          bottom: 0;
+          border-bottom: 3px solid  #d38df1;
+          border-left: 3px solid #f5f1f8;
+          transform: translate(100%, -50%)
+        }
+
+        a:hover:before,
+        a:hover:after{
+          transform: translate(0,0);
+          opacity: 1;
+        }
+
+        a:hover {
+          color: #c39bcf;
+        }
+        img:hover{
+            transform: rotate(0) scale(1.2) translateZ(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i>BIGG BOSS VOTING ZONE</i></h1>
+    </header>
+    <main>
+        <section>
+            <nav>
+                <a href=" /about.html">About</a>
+                <!-- <a href="/login.html"> Login</a> -->
+                <a href="/help.html"> Help</a>
+                <!-- <a href="/profile.html">Profile</a> -->
+                <a href="/voting.html">Vote</a>
+                <a href="/contestants1.html">Contestants</a>
+                <a href=" /index.html"> Home</a>
+            </nav>
+        </section>
+        <br>
+        <br>
+        <hr>
+        <article>
+            <div class="container">
+                <div class="box1">
+                    <p>
+                        <i>
+                            Bigg Boss 16 starts with a bang! Popular celebrities, 100 + Cameras<br> and 100 days of non-stop entertainment!<br> Salman Khan brings the brand new season of Bigg Boss<br> where the contestants are in for a wild ride. Get ready<br> for the high-octane fights and uncut drama, but remember there<br> can only be one King of this jungle! 
+                        </i>
+                    </p>
+                </div>
+                <div class="box2">
+                     <img src="/Bigg-Boss3.jpg" alt="image">
+                </div>
+            </div>
+        </article>
+    </main>
+    <hr>
+</body>
+</html>

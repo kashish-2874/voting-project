@@ -1,0 +1,44 @@
+h1,p{
+    text-align: center;
+}
+p{
+    font-size: x-large;
+}
+h1{
+    font-size: xxx-large;
+}
+h1:hover{
+    color:azure ;
+}
+p:hover{
+    color:azure ;
+}
+body{
+    background-color: rgb(11, 7, 36);
+    color: rgb(130, 136, 138);
+}
+
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px;
+    /* padding: 150px; */
+    /* padding-left: 70px; */
+}
+.second{
+    /* padding-left: 60px; */
+    margin: 50px;
+}
+h3{
+    text-align: center;
+}
+h3:hover{
+    color:azure ;
+}
+.second:hover{
+    box-shadow: 0px 0px 20px 5px black;
+    transform: rotate(0) scale(1.2) translateZ(0);
+}
+

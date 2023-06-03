@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background-color: #111; */
+            /* background-image: url("bigboss-background.jpg"); */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: "raleway",sans-serif;
+            /* background:#41495c; */
+            background: linear-gradient(90deg, #010405,rgb(114, 113, 114), #2e2d2d);
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            font-size: xxx-large;
+            color: #b2b4b6;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        h1:hover{
+            color:whitesmoke;
+        }
+
+        #candidates {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(231, 219, 219, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px 5px rgb(4, 8, 12);
+        }
+
+        .candidate {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgba(253, 230, 230, 0.9)
+        }
+
+        .candidate img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .candidate .name {
+            font-weight: bold;
+        }
+
+        .vote-btn {
+            margin-left: auto;
+            background-color: #476980;
+            color: #f8f6f6;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .vote-count {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        #show-votes-btn {
+            display: block;
+            margin: 20px auto;
+            background-color: #a2a6ac;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        #kb{
+            text-align: center;
+            color: #41495c;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: xx-large;
+        }
+
+        /* Additional styling */
+        #candidates {
+            border: none;
+            text-align: center;
+            color: rgb(70, 72, 78);
+            /* color: #b2b4b6; */
+        }
+
+        .candidate {
+            background-color: rgba(172, 171, 171, 0.692);
+            border: none;
+        }
+
+        .candidate:hover {
+            background-color: rgba(160, 158, 158, 0.98);
+            /* transform: translateY(-5px); */
+            /* transform: translate(-50px,50px); */
+            /* transform: translate3d(5px,5px,5px); */
+	        /* box-shadow: 0 5px 10px rgba(0,0,0,0.2); */
+            /* box-decoration-break: slice; */
+            transform: rotate(0) scale(1.1) translateZ(0);
+        }
+
+        .vote-btn:hover {
+            background-color: #4d5052;
+            transform: rotate(0) scale(1.1) translateZ(0);
+        }
+
+        #show-votes-btn:hover {
+            background-color: #8a8a8a;
+            transform: rotate(0) scale(1.1) translateZ(0);
+            
+        }
+
+        /* Thank you message */
+        .thank-you {
+            text-align: center;
+            color: #fff;
+            margin-top: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        #password-modal{
+            text-align: end;
+            color: rgb(43, 43, 54);
+        }
+    </style>
+</head>
+<body>
+    <!-- Rest of the HTML code remains unchanged -->
+    <!-- ... -->
+    <h1>VOTING PLATFORM</h1>
+    <div id="candidates">
+        <h2 id="kb">CONTESTANTS</h2>
+        <div class="candidate">
+            <img src="mc stan.jpeg" alt="Mc Stan">
+            <span class="name">MC STAN</span>
+            <button class="vote-btn" onclick="vote(1)">Vote</button>
+            <span class="vote-count" id="vote-count-1">98</span>
+        </div>
+        <div class="candidate">
+            <img src="nimrit kaur.jpeg" alt="Subul Touqueer">
+            <span class="name">NIMRIT KAUR AHLUWALIA</span>
+            <button class="vote-btn" onclick="vote(2)">Vote</button>
+            <span class="vote-count" id="vote-count-2">30</span>
+        </div>
+        <div class="candidate">
+            <img src="tina dutta.jpeg" alt="Abdu Rozik">
+            <span class="name">TINA DUTTA</span>
+            <button class="vote-btn" onclick="vote(3)">Vote</button>
+            <span class="vote-count" id="vote-count-3">50</span>
+        </div>
+        <div class="candidate">
+            <img src="ankit gupta.jpeg" alt="Ankit Gupta">
+            <span class="name">ANKIT GUPTA</span>
+            <button class="vote-btn" onclick="vote(4)">Vote</button>
+            <span class="vote-count" id="vote-count-4">75</span>
+        </div>
+        <div class="candidate">
+            <img src="subul.jpeg" alt="Archana Gautam">
+            <span class="name">SUBUL TOUQEER</span>
+            <button class="vote-btn" onclick="vote(5)">Vote</button>
+            <span class="vote-count" id="vote-count-5">67</span>
+        </div>
+        <div class="candidate">
+            <img src="abdu.jpeg" alt="Manya Singh">
+            <span class="name">ABDU ROZIK</span>
+            <button class="vote-btn" onclick="vote(6)">Vote</button>
+            <span class="vote-count" id="vote-count-6">54</span>
+        </div>
+        <div class="candidate">
+            <img src="manya.jpeg" alt="Nimrit Kaur">
+            <span class="name">MANYA SINGH</span>
+            <button class="vote-btn" onclick="vote(7)">Vote</button>
+            <span class="vote-count" id="vote-count-7">98</span>
+        </div>
+        <div class="candidate">
+            <img src="archana gautum.jpeg" alt="Priyanka Choudhary">
+            <span class="name">ARCHANA GAUTAM</span>
+            <button class="vote-btn" onclick="vote(8)">Vote</button>
+            <span class="vote-count" id="vote-count-8">11</span>
+        </div>
+        <div class="candidate">
+            <img src="soundaraya sharma.jpeg" alt="Sajid Khan">
+            <span class="name">SOUNDARYA SHARMA</span>
+            <button class="vote-btn" onclick="vote(9)">Vote</button>
+            <span class="vote-count" id="vote-count-9">45</span>
+        </div>
+        <div class="candidate">
+            <img src="shalin bhanot.jpeg" alt="Sajid Khan">
+            <span class="name">SHALIN BHANOT</span>
+            <button class="vote-btn" onclick="vote(10)">Vote</button>
+            <span class="vote-count" id="vote-count-10">86</span>
+        </div>
+        <div class="candidate">
+            <img src="shreejita de.jpeg" alt="Sajid Khan">
+            <span class="name">SHREEJITA DE</span>
+            <button class="vote-btn" onclick="vote(11)">Vote</button>
+            <span class="vote-count" id="vote-count-11">51</span>
+        </div>
+        <div class="candidate">
+            <img src="shiv thakre.jpeg" alt="Sajid Khan">
+            <span class="name">SHIV THAKARE</span>
+            <button class="vote-btn" onclick="vote(12)">Vote</button>
+            <span class="vote-count" id="vote-count-12">75</span>
+        </div>
+        <div class="candidate">
+            <img src="priyanka.jpeg" alt="Sajid Khan">
+            <span class="name">PRIYANKA CHAHAR CHOUDHARY</span>
+            <button class="vote-btn" onclick="vote(13)">Vote</button>
+            <span class="vote-count" id="vote-count-13">46</span>
+        </div>
+        <div class="candidate">
+            <img src="sajid khan.jpeg" alt="Sajid Khan">
+            <span class="name">SAJID KHAN</span>
+            <button class="vote-btn" onclick="vote(14)">Vote</button>
+            <span class="vote-count" id="vote-count-14">36</span>
+        </div>
+    </div>
+    <button id="show-votes-btn" onclick="showVotes()">Show Votes</button>
+
+    <div id="thank-you" class="thank-you" style="display: none;">Thank you for your vote!</div>
+
+
+    <div id="password-modal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Password</h2>
+            <input type="password" id="password-input">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        /* Rest of the JavaScript code remains unchanged */
+        /* ... */
+        let votes = [98, 30, 50, 75, 67, 54, 98, 11, 45, 86, 51, 75, 46, 36]; // Initial vote counts for each candidate
+        let voted = false; // Flag to track if the user has voted
+
+        function vote(candidateIndex) {
+            if (voted) {
+                alert("You have already voted.");
+                return;
+            }
+
+            votes[candidateIndex - 1]++; // Increment the vote count for the selected candidate
+            updateVoteCount(candidateIndex);
+            voted = true; // Set the voted flag to true
+            showThankYouMessage();
+        }
+
+        function updateVoteCount(candidateIndex) {
+            const voteCountElement = document.getElementById(`vote-count-${candidateIndex}`);
+            voteCountElement.textContent = votes[candidateIndex - 1];
+        }
+
+        function showVotes() {
+            let totalVotes = 0;
+            for (let i = 0; i < votes.length; i++) {
+                totalVotes += votes[i];
+            }
+            alert(`Total Votes: ${totalVotes}\n\nMC STAN: ${votes[0]} votes\nNIMRIT KAUR AHLUWALIA: ${votes[1]} votes\nTINA DUTTA: ${votes[2]} votes\nANKIT GUPTA: ${votes[3]} votes\nSUBUL TOUQEER: ${votes[4]} votes\nABDU ROZIK: ${votes[5]} votes\nMANYA SINGH: ${votes[6]} votes\nARCHANA GAUTAM: ${votes[7]} votes\nSOUNDARYA SHARMA: ${votes[8]}votes\nSHALIN BHANOT: ${votes[9]} votes\nSHREEJITA DE: ${votes[10]} votes\nSHIV THAKARE: ${votes[11]} votes\nPRIYANKA CHAHAR CHOUDHARY ${votes[12]} votes\nSAJID KHAN: ${votes[13]} votes`);
+        }
+
+        function showThankYouMessage() {
+            const thankYouElement = document.getElementById("thank-you");
+            thankYouElement.style.display = "block";
+        }
+
+        function showVotes() {
+            const passwordModal = document.getElementById('password-modal');
+            passwordModal.style.display = 'block';
+        }
+
+        function checkPassword() {
+            const passwordInput = document.getElementById('password-input').value;
+            if (passwordInput === 'kashish') {
+                passwordInput.value = '';
+                const passwordModal = document.getElementById('password-modal');
+                passwordModal.style.display = 'none';
+
+                let totalVotes = 0;
+                for (let i = 0; i < votes.length; i++) {
+                    totalVotes += votes[i];
+                }
+                alert(`Total Votes: ${totalVotes}\n\nMC STAN: ${votes[0]} votes\nNIMRIT KAUR AHLUWALIA: ${votes[1]} votes\nTINA DUTTA: ${votes[2]} votes\nANKIT GUPTA: ${votes[3]} votes\nSUBUL TOUQEER: ${votes[4]} votes\nABDU ROZIK: ${votes[5]} votes\nMANYA SINGH: ${votes[6]} votes\nARCHANA GAUTAM: ${votes[7]} votes\nSOUNDARYA SHARMA: ${votes[8]}votes\nSHALIN BHANOT: ${votes[9]} votes\nSHREEJITA DE: ${votes[10]} votes\nSHIV THAKARE: ${votes[11]} votes\nPRIYANKA CHAHAR CHOUDHARY ${votes[12]} votes\nSAJID KHAN: ${votes[13]} votes`);
+            } else {
+                alert('Sorry, incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

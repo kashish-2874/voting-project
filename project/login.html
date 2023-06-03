@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="" id="loginForm">
+                    <h2>LOGIN</h2>
+                    <div class="input-box">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" id="username" required>
+                        <label for="">E-mail</label>
+                    </div>
+                    <div class="input-box">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label for="">
+                            <input type="checkbox">Remember Me
+                            <a href="#">Forget Password</a>
+                        </label>
+                    </div>
+                    <button type="submit" onclick="click()">
+                        <!-- <a href="index1.html">log in</a> -->
+                        LOG IN
+                    </button>
+                    <div class="register">
+                        <p>Don't have an account?<a href="#">Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- <script>
+        document.getElementsById("loginForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          
+          // Perform login logic here
+          
+          // Example: Predefined valid credentials
+          var validCredentials = [
+            { username: "Kashish@gmail.com", password: "kashish" },
+            { username: "kashishg@gmail.com", password: "kashishg" },
+            { username: "arushi@gmail.com", password: "arushi" },
+    
+          ];
+          
+          var isValid = validCredentials.some(function(cred) {
+            return cred.username === email && cred.password === password;
+          });
+          
+          if (isValid) {
+            alert("Login successful!");
+            window.location.href = "/index1.html"
+            // Redirect to another page or perform other actions
+          } else {
+            alert("Invalid username or password");
+          }
+        });
+      </script> -->
+      <script>
+        let a = document.getElementById("username").value;
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        function click(){
+            if(username==null){
+            alert("please enter required details");
+            }
+            else{
+                function kashish(){
+                alert("you have login succesfully!!");
+                window.location.href = "/index1.html";
+            }
+            }
+        }
+      </script>
+</body>
+</html>
